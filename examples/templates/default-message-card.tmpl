@@ -21,11 +21,17 @@
           "value": "{{ reReplaceAll "_" "\\\\_" $value }}"
         },
         {{- end -}}
-        {{$c := counter}}{{ range $key, $value := $alert.Labels }}{{if call $c}},{{ end }}
+        {{$allows := []string{"alertname","cluster_name","instance","severity","threshold_value"}}}
+        {{$c := counter}}{{ range $key, $value := $alert.Labels }}
+        {{- range $l := $allows }} 
+        {{if eq $l $key}}
+        {{if call $c}},{{ end }}
         {
           "name": "{{ reReplaceAll "_" "\\\\_" $key }}",
           "value": "{{ reReplaceAll "_" "\\\\_" $value }}"
         }
+        {{end}}
+        {{- end }}
         {{- end }}
       ],
       "markdown": true

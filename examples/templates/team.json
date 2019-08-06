@@ -1,0 +1,56 @@
+{
+    "receiver": "c-874mx:node-alert",
+    "status": "firing",
+    "alerts": [
+      {
+        "status": "firing",
+        "labels": {
+          // "alert_name": "High cpu load",
+          // "alert_type": "metric",
+          "alertname": "High cpu load",
+          "cluster_name": "k8s-dev (ID: c-874mx)",
+          // "comparison": "greater than",
+          // "duration": "3m",
+          // "expression": "sum(node_load1) by (instance) / count(node_cpu_seconds_total{mode=\"system\"}) by (instance) * 100u003e100",
+          // "group_id": "c-874mx:node-alert",
+          "instance": "10.56.239.108:9796",
+          // "prometheus": "cattle-prometheus/cluster-monitoring",
+          // "prometheus_from": "k8s-dev",
+          // "rule_id": "c-874mx:node-alert_high-cpu-load",
+          "severity": "warning",
+          "threshold_value": "100"
+        },
+        "annotations": {
+          "current_value": "130.66666666666666"
+        },
+        "startsAt": "2019-08-06T05:13:43.597164953Z",
+        "endsAt": "0001-01-01T00:00:00Z",
+        "generatorURL": "http://prometheus-cluster-monitoring-0:9090/graph?g0.expr=sum+by%28instance%29+%28node_load1%29+%2F+count+by%28instance%29+%28node_cpu_seconds_total%7Bmode%3D%22system%22%7D%29+%2A+100+%3E+100u0026g0.tab=1"
+      }
+    ],
+    "groupLabels": {
+      "rule_id": "c-874mx:node-alert_high-cpu-load"
+    },
+    "commonLabels": {
+      "alert_name": "High cpu load",
+      "alert_type": "metric",
+      "alertname": "High cpu load",
+      "cluster_name": "k8s-dev (ID: c-874mx)",
+      "comparison": "greater than",
+      "duration": "3m",
+      "expression": "sum(node_load1) by (instance) / count(node_cpu_seconds_total{mode=\"system\"}) by (instance) * 100u003e100",
+      "group_id": "c-874mx:node-alert",
+      "instance": "10.56.239.108:9796",
+      "prometheus": "cattle-prometheus/cluster-monitoring",
+      "prometheus_from": "k8s-dev",
+      "rule_id": "c-874mx:node-alert_high-cpu-load",
+      "severity": "warning",
+      "threshold_value": "100"
+    },
+    "commonAnnotations": {
+      "current_value": "130.66666666666666"
+    },
+    "externalURL": "http://alertmanager-cluster-alerting-0:9093",
+    "version": "4",
+    "groupKey": "{}/{group_id=\"c-874mx:node-alert\"}/{rule_id=\"c-874mx:node-alert_high-cpu-load\"}:{rule_id=\"c-874mx:node-alert_high-cpu-load\"}"
+  }

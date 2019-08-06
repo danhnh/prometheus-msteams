@@ -21,7 +21,7 @@
 package main
 
 import (
-	"github.com/bzon/prometheus-msteams/cmd"
+	"github.com/danhnh/prometheus-msteams/cmd"
 )
 
 func main() {
